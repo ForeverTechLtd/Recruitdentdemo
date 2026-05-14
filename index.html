@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Recruitdent interactive prototype using demo data only.">
+    <title>Recruitdent MVP</title>
+    <link rel="stylesheet" href="styles.css?v=20260514-shareable-demo-v1">
+  </head>
+  <body>
+    <div class="demo-banner" role="status">
+      <strong>Recruitdent interactive prototype</strong>
+      <span>Demo data only. Not a live booking, payment or document-verification platform.</span>
+    </div>
+
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-dashboard" viewBox="0 0 24 24"><path d="M4 13h7V4H4v9Zm0 7h7v-5H4v5Zm9 0h7v-9h-7v9Zm0-16v5h7V4h-7Z"/></symbol>
+      <symbol id="icon-clinic" viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14h-6v-6H9v6H3Zm4-9h3V9H7v3Zm7 0h3V9h-3v3Z"/></symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM8 12h8v2H8v-2Zm0 4h8v2H8v-2Zm0-8h4v2H8V8Z"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 0 1 16 0H4Z"/></symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24"><path d="M8 14a5 5 0 1 1 4.6-3H22v4h-3v3h-4v-3h-2.4A5 5 0 0 1 8 14Zm0-3a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 24 24"><path d="M9 6V4h6v2h5a2 2 0 0 1 2 2v4h-8v-2h-4v2H2V8a2 2 0 0 1 2-2h5Zm13 8v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4h8v2h4v-2h8Z"/></symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7 2h2v3h6V2h2v3h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3V2Zm13 8H4v10h16V10Z"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4 2.6 2.6 5.6-5.6L18 9l-7 7Z"/></symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-6 4V6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.4L9 16.2Z"/></symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z"/></symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24"><path d="M8 8h12v12H8V8Zm-4 8V4h12v2H6v10H4Z"/></symbol>
+      <symbol id="icon-pound" viewBox="0 0 24 24"><path d="M7 21v-2h2v-5H7v-2h2V8a5 5 0 0 1 9.4-2.4l-1.8 1A3 3 0 0 0 11 8v4h5v2h-5v5h8v2H7Z"/></symbol>
+      <symbol id="icon-course" viewBox="0 0 24 24"><path d="M3 5.5 12 2l9 3.5-9 3.5-9-3.5Zm3 4.1 6 2.3 6-2.3V16c0 1.7-2.7 4-6 4s-6-2.3-6-4V9.6Zm13 1.1 2-.8V17h-2v-6.3Z"/></symbol>
+      <symbol id="icon-news" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3V6a2 2 0 0 1 2-2h1Zm2 14h12V6H7v12Zm2-9h8v2H9V9Zm0 4h8v2H9v-2ZM4 6v11a1 1 0 0 0 1 1V6H4Z"/></symbol>
+    </svg>
+
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview" aria-label="Recruitdent overview">
+          <span class="brand-mark">RD</span>
+          <span>
+            <strong>Recruitdent</strong>
+            <small>Verified workforce network</small>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#overview" data-route="overview" aria-label="Overview"><svg><use href="#icon-dashboard"></use></svg><span>Overview</span></a>
+          <a href="#clinic" data-route="clinic" aria-label="Clinic"><svg><use href="#icon-clinic"></use></svg><span>Clinic</span></a>
+          <a href="#clinic-profile" data-route="clinic-profile" aria-label="Clinic profile"><svg><use href="#icon-document"></use></svg><span>Profile</span></a>
+          <a href="#professional" data-route="professional" aria-label="Professional"><svg><use href="#icon-key"></use></svg><span>Professional</span></a>
+          <a href="#marketplace" data-route="marketplace" aria-label="Job board"><svg><use href="#icon-briefcase"></use></svg><span>Job board</span></a>
+          <a href="#rota" data-route="rota" aria-label="Rota"><svg><use href="#icon-calendar"></use></svg><span>Rota</span></a>
+          <a href="#courses" data-route="courses" aria-label="Courses"><svg><use href="#icon-course"></use></svg><span>Courses</span></a>
+          <a href="#news" data-route="news" aria-label="Blogs and news"><svg><use href="#icon-news"></use></svg><span>News</span></a>
+          <a href="#admin" data-route="admin" aria-label="Admin"><svg><use href="#icon-shield"></use></svg><span>Admin</span></a>
+          <a href="#reviews" data-route="reviews" aria-label="Messages"><svg><use href="#icon-message"></use></svg><span>Messages</span></a>
+        </nav>
+
+        <section class="identity-panel" aria-label="Current workspace">
+          <span class="eyebrow">Active view</span>
+          <select id="personaSelect" aria-label="Switch account type">
+            <option value="clinic">Clinic owner</option>
+            <option value="clinician">Clinician</option>
+            <option value="admin">Recruitdent admin</option>
+          </select>
+          <p id="personaHint"></p>
+        </section>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">UK dentistry launch</span>
+            <h1 id="pageTitle">Overview</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="resetDemo" type="button" title="Reset demo data" aria-label="Reset demo data">
+              <svg><use href="#icon-copy"></use></svg>
+            </button>
+            <a class="primary-action" id="topPrimaryAction" href="#clinic"><svg><use href="#icon-plus"></use></svg><span>Post shift</span></a>
+          </div>
+        </header>
+
+        <section id="app" class="view" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <template id="emptyTemplate">
+      <div class="empty-state">
+        <div class="empty-visual" aria-hidden="true"></div>
+        <h2>No items yet</h2>
+        <p>New activity will appear here as soon as the workflow starts.</p>
+      </div>
+    </template>
+
+    <script src="app.js?v=20260514-shareable-demo-v1"></script>
+  </body>
+</html>

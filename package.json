@@ -1,0 +1,10 @@
+{
+  "name": "recruitdent-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recruitdent clinic-led MVP web app prototype",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  }
+}
